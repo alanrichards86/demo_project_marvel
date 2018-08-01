@@ -2,7 +2,12 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about/captain-america">Captain America</router-link> |
+      <router-link to="/about/iron-man">Iron Man</router-link> |
+      <router-link to="/about/thor">Thor</router-link> |
+      <router-link to="/about/hulk">Hulk</router-link> |
+      <br>
+      <router-link to="/about/deadpool">The Boss/Leader/MVP/Savior</router-link>
     </div>
     <router-view/>
   </div>
