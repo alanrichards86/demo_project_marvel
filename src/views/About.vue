@@ -27,14 +27,13 @@ export default {
   },
   watch: {
     '$route.params.name': function() {
-      this.getAvenger();
+      this.getAvenger(this.$route.params.name);
     }
   },
   methods: {
-    getAvenger() {
-      let avenger = this.$route.params.name;
+    getAvenger(avenger) {
+      // let avenger = this.$route.params.name;
       console.log(avenger);
-
     let url = 'https://api.cosmicjs.com/v1/978eab70-9016-11e8-a778-ef6b47017e84/object/' + avenger + '?hide_metafields=true'
     axios.get(url)
     .then(resp => {
@@ -43,12 +42,18 @@ export default {
       this.avenger_name = data.name;
       this.wiki = data.wiki
       this.logo = data.logo.url
+      // this.assignHeroData(data);
     })
     .catch(e => {
       console.log(e);
     })
     }
   },
+  // assignHeroData(heroData) {
+  //   this.avenger_name = heroData.name;
+  //   this.wiki = heroData.wiki
+  //   this.logo = heroData.logo.url
+  // },
   created() {
     // console.log($route);
     this.getAvenger();

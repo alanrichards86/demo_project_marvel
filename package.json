@@ -9,7 +9,9 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "animate.css": "^3.7.0",
     "axios": "^0.18.0",
+    "vee-validate": "^2.1.0-beta.7",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
@@ -25,5 +27,11 @@
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.16"
+  },
+  "babel": {
+    "presets": [
+      "vue",
+      "@vue/app"
+    ]
   }
 }

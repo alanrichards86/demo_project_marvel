@@ -4,6 +4,8 @@ import Home from './views/Home.vue'
 
 Vue.use(Router)
 
+//  Router -WITH- History set up
+
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
@@ -14,7 +16,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/about',
+      path: '/about/:name',
       name: 'about',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
@@ -23,3 +25,31 @@ export default new Router({
     }
   ]
 })
+
+
+//  -WITH OUT- History set up
+
+// import Vue from 'vue';
+// import Router from 'vue-router';
+// import Home from './views/Home.vue';
+// import About from './views/About.vue';
+
+// Vue.use(Router);
+
+// export default new Router({
+//   routes: [
+//     {
+//       path: '/about/:name',
+//       name: 'about',
+//       component: About,
+//     },
+//     {
+//       path: '*',
+//       name: 'home',
+//       component: Home,
+//     },
+//   ],
+// });
+
+
+
