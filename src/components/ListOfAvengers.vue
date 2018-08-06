@@ -1,14 +1,15 @@
 <template>
   <div class="hello">
     <div class="holder">
+      <h1>Hello</h1>
       <form @submit.prevent="addSkill">
 
-        <input type="text" autocomplete="off" placeholder="Enter an Avenger you would like see in the movies..." v-model="skill" :validate="'min:5'" name="skill">
+        <input type="text" autocomplete="off" placeholder="Enter an Avenger you would like see in the movies..." v-model="skill" v-validate="'min:5'" name="skill">
                                                                   <!-- V-Validate  ^^^^^^^^^^ form validation from plugin vee-validate -->
         <transition name="alert-in" enter-active-class="animated flipInX" leave-active-class="animated flipOutX">
                                                     <!-- FlipInX ^^^^^^^    link to these animation found in index.html -->
                                                     <!-- https://daneden.github.io/animate.css/ -->
-          <p class="alert" v-if="errors.has('skill')" >{{errors.first('skill')}}</p>
+          <!-- <p class="alert" v-if="errors.has('skill')" >{{errors.first('skill')}}</p> -->
         </transition>
 
       </form>

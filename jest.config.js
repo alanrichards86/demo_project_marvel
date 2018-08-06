@@ -8,8 +8,12 @@ module.exports = {
   transform: {
     '^.+\\.vue$': 'vue-jest',
     '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
-    '^.+\\.jsx?$': 'babel-jest'
+    '^.+\\.jsx?$': 'babel-jest',
+    ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
   },
+  transformIgnorePatterns: [
+    "node_modules/(?!(babel-jest|jest-vue-preprocessor)/)"
+  ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1'
   },

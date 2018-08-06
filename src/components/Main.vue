@@ -12,7 +12,7 @@
 import axios from 'axios';
 
 export default {
-  name: 'HelloWorld',
+  name: 'Main',
   data() {
     return {
       title: null,

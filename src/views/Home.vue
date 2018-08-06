@@ -10,7 +10,7 @@
 <script>
 // @ is an alias to /src
 import Main from '@/components/Main.vue';
-import ListOfAvengers from '../components/avengers_list/ListOfAvengers.vue';
+import ListOfAvengers from '../components/ListOfAvengers.vue';
 
 export default {
   name: 'home',
