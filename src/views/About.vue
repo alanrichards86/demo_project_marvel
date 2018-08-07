@@ -17,7 +17,7 @@ import axios from 'axios';
 
 
 export default {
-  name: 'HelloWorld',
+  name: 'About',
   data: function() {
     return {
       avenger_name: null,
